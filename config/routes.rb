@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get "/competitions/:competition_id/new_team", to: 'competitions#new'
   post "/competitions/:competition_id", to: 'competitions#create'
+  # post "/competitions/:competition_id/new_team", to: 'competitions#create'
   get "/competitions/:id", to: 'competitions#show'
   get "/competitions", to: 'competitions#index'
 end

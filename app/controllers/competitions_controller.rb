@@ -12,10 +12,12 @@ class CompetitionsController < ApplicationController
   end
 
   def create
-    @competition = Competition.find(params[:id])
-    new_team = @competition.teams.create!(hometown: :hometown, nickname: :nickname, competition_id: @competition.id)
-
-    new_team.update
+    @competition = Competition.find(params[:competition_id])
+    new_team = @competition.teams.new(hometown: params[:hometown], nickname: params[:nickname])
+    # new_team = @competition.teams.create!(hometown: params[:hometown], nickname: params[:nickname])
+    # new_team = @competition.teams.create!(hometown: :hometown, nickname: :nickname) #, competition_id: @competition.id)  SUBMITTED
+    # new_team.update
+    new_team.save
     redirect_to "/competitions/#{@competition.id}"
   end
 end

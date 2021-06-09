@@ -1,5 +1,5 @@
 <h3>Register New Team</h3><br/>
-<%= form_with url:"/competitions/#{@competition.id}/new_team", method: :post, local: true do |form| %>
+<%= form_with url:"/competitions/#{@competition.id}", method: :post, local: true do |form| %>
   <%= form.label :hometown %>
   <%= form.text_field :hometown %><br/><br/>
 

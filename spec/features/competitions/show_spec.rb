@@ -12,7 +12,7 @@ RSpec.describe 'the competition show' do
     @player_3 = Player.create!(name: 'Joe Schmoe', age: 30)
     @player_4 = Player.create!(name: 'Pat Smith', age: 38)
     @player_5 = Player.create!(name: 'Jamie Jones', age: 41)
-    @player_6 = Player.create!(name: 'Jamie Jones', age: 20)
+    @player_6 = Player.create!(name: 'Jill Smith', age: 20)
 
     TeamPlayer.create!(team: @team_1, player: @player_1)
     TeamPlayer.create!(team: @team_1, player: @player_2)

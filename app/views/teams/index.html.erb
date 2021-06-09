@@ -1,0 +1,4 @@
+<h3>Teams Index</h3>
+<% @age_sorted_teams.each do |team| %>
+    <p>&emsp;<%= team.nickname %>, average team age is <%= team.average_team_age %></p><br>
+<% end %>
